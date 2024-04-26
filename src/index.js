@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function Car(props) {
-    return <h2>I am a {props.brand.model}!</h2>;
-}
+function Football() {
+    const shoot = (a, b) => {
+        alert(b.type)
+    }
 
-function Garage() {
-    // const carName = "Ford";
-    const carInfo = {name: "Ford", model: "Mustang"};
     return (
-        <>
-            <h1>Who lives in my garage?</h1>
-            <Car brand={carInfo}/>
-        </>
+        <button onClick={(event) => shoot("Goal!", event)}>
+            Take the shot!
+        </button>
     );
 }
 
-// const myElement = <Car brand="Ford"/>;
-
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
-root.render(<Garage/>);
+root.render(<Football/>);
